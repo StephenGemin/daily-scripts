@@ -1,0 +1,31 @@
+[lint]
+select = [
+    'B',        # flake8-bugbear,
+    'C9',       # mccabe
+    'C4',       # flake8-comprehensions
+    'E', 'W',   # pycodestyle
+    'F',        # pyflakes
+    'I',        # isort
+    'ISC',      # flake8-implicit-str-concat
+    'N',        # pep8-naming
+    'PL',       # pylint
+    'RUF',      # Ruff specific rules
+]
+ignore = [
+    'E501',     # Never enforce line length violations, leave it up to the formatter
+    # Avoid conflicting rules between lint and format
+    # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    'W191',     # tab-indentation
+    'E111',     # indentation-with-invalid-multiple
+    'E114',     # indentation-with-invalid-multiple-comment
+    'E117',     # over-indented
+    'D206',     # docstring-tab-indentation
+    'D300',     # triple-single-quotes
+    'Q000',     # bad-quotes-inline-string
+    'Q001',     # bad-quotes-multiline-string
+    'Q002',     # bad-quotes-docstring
+    'Q003',     # avoidable-escaped-quote
+    'COM812',   # missing-trailing-comma
+    'COM819',   # prohibited-trailing-comma
+    'ISC002',   # multi-line-implicit-string-concatenation (if used without ISC001 and allow-multiline = false)
+]
